@@ -1,0 +1,45 @@
+{
+    "name": "simple-typescript-library",
+    "version": "0.1.9",
+    "description": "Example project to demonstrate publishing to NPM and releasing to GitHub.",
+    "main": "dist/index.js",
+    "type": "module",
+    "files": [
+        "src",
+        "dist",
+        "demos",
+        "docs",
+        "index.html"
+    ],
+    "scripts": {
+        "start": "npm run grunt",
+        "grunt": "grunt --gruntfile gruntfile.cjs",
+        "gulp": "gulp --gulpfile gulpfile.cjs",
+        "test": "jest",
+        "preversion": "npm run grunt release:preversion",
+        "version": "npm run grunt release:version",
+        "postversion": "npm run grunt release:postversion"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ronyeh/simple-typescript-library.git"
+    },
+    "author": "Ron B. Yeh",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/ronyeh/simple-typescript-library/issues"
+    },
+    "homepage": "https://github.com/ronyeh/simple-typescript-library#readme",
+    "devDependencies": {
+        "@babel/core": "^7.16.7",
+        "@babel/preset-env": "^7.16.7",
+        "@babel/preset-typescript": "^7.16.7",
+        "@types/jest": "^27.4.0",
+        "babel-jest": "^27.4.5",
+        "grunt": "^1.4.1",
+        "grunt-contrib-watch": "^1.1.0",
+        "gulp": "^4.0.2",
+        "jest": "^27.4.5",
+        "release-it": "^14.11.8"
+    }
+}

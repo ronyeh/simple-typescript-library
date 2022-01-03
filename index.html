@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p>Open the developer console.</p>
+        <p><a href="./demos/">Also take a look at the demos/ folder</a></p>
+        <script type="module">
+            import { SimpleTypeScriptLibrary } from "./dist/index.js";
+            console.log(SimpleTypeScriptLibrary.addAtoB());
+            window.SimpleTypeScriptLibrary = SimpleTypeScriptLibrary;
+        </script>
+    </body>
+</html>
