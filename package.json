@@ -15,10 +15,7 @@
         "start": "npm run grunt",
         "grunt": "grunt --gruntfile gruntfile.cjs",
         "gulp": "gulp --gulpfile gulpfile.cjs",
-        "test": "jest",
-        "preversion": "npm run grunt release:preversion",
-        "version": "npm run grunt release:version",
-        "postversion": "npm run grunt release:postversion"
+        "test": "jest"
     },
     "repository": {
         "type": "git",
