@@ -55,17 +55,6 @@ module.exports = function (grunt) {
         execSync("rm -rf dist/");
     });
 
-    // For testing.
-    grunt.registerTask("fakeCompile10Seconds", "A fake 10 second task.", function () {
-        const done = this.async();
-        console.log("Wait 10 seconds for the fake task to complete...");
-        require("timers/promises")
-            .setTimeout(10000)
-            .then(() => {
-                console.log("DONE");
-            });
-    });
-
     // grunt release
     // GITHUB_TOKEN=XYZ grunt build-test-release
     // GITHUB_TOKEN=XYZ grunt build-test-release:alpha
@@ -77,11 +66,11 @@ module.exports = function (grunt) {
         const options = {
             verbose: 1,
             hooks: {
-                "before:init": ["npm run grunt clean"],
+                "before:init": ["echo before:init", "npm run grunt clean"],
                 "after:bump": [
+                    //
                     "echo after:bump",
                     "cat package.json",
-                    "npm run grunt fakeCompile10Seconds",
                     "npm run grunt compile",
                     "npm run test",
                     "echo add dist/ folder",
@@ -104,9 +93,9 @@ module.exports = function (grunt) {
                 changelog: false,
                 commitMessage: "Release simple-typescript-library ${version}",
                 requireCleanWorkingDir: false,
-                commit: false,
-                tag: false,
-                push: false,
+                commit: true,
+                tag: true,
+                push: true,
             },
             github: {
                 release: true,
