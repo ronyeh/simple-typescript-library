@@ -64,7 +64,7 @@ module.exports = function (grunt) {
     grunt.registerTask("release-it", "Release to npm and GitHub with the release-it lib.", function (...args) {
         const done = this.async();
         const options = {
-            verbose: 1,
+            // verbose: 1,
             hooks: {
                 "before:init": ["echo before:init", "npm run grunt clean"],
                 "after:bump": [

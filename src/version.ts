@@ -1,3 +1,3 @@
-export const VERSION = '0.2.2-alpha.0';
-export const ID = 'd584f466b4ae2284303e4398adede7bcdc4a9331';
-export const DATE = '2022-01-18T10:19:07.317Z';
+export const VERSION = '0.2.2-beta.0';
+export const ID = '84edac79a78d3c00c6cb1edc13e1c96866959062';
+export const DATE = '2022-01-18T10:19:53.380Z';
