@@ -1,6 +1,6 @@
 {
     "name": "simple-typescript-library",
-    "version": "0.1.10-alpha.2",
+    "version": "0.1.10-rc.5",
     "description": "Example project to demonstrate publishing to NPM and releasing to GitHub.",
     "main": "dist/index.js",
     "type": "module",
